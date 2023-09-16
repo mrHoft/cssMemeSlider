@@ -13,8 +13,44 @@ ul {
   padding: 0;
 }
 
-.carousel__control1 input {
+.carousel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  padding: 2rem 0;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+}
+
+.slides .item {
+  border-radius: 1rem;
+}
+
+input[name='meme_'] {
   width: 0;
   height: 0;
   visibility: hidden;
+}
+
+.carousel__text p {
+  display: none;
+}
+
+#meme01:checked ~ .carousel__text p:nth-child(1) {
+  display: block;
+}
+#meme02:checked ~ .carousel__text p:nth-child(2) {
+  display: block;
+}
+#meme03:checked ~ .carousel__text p:nth-child(3) {
+  display: block;
+}
+#meme04:checked ~ .carousel__text p:nth-child(4) {
+  display: block;
 }
