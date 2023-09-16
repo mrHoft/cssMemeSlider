@@ -13,7 +13,54 @@ ul {
   padding: 0;
 }
 
-.carousel {
+wrap-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+}
+
+/* slider controls */
+.controlls label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.dot {
+  display: inline-block;
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid gray;
+  border-radius: 50%;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.controlls label:hover .dot {
+  background-color: white;
+  border-color: white;
+}
+
+#meme01:checked ~ .slider wrap-bottom .controlls li:nth-child(1) .dot {
+  background-color: transparent;
+}
+#meme02:checked ~ .slider wrap-bottom .controlls li:nth-child(2) .dot {
+  background-color: transparent;
+}
+#meme03:checked ~ .slider wrap-bottom .controlls li:nth-child(3) .dot {
+  background-color: transparent;
+}
+#meme04:checked ~ .slider wrap-bottom .controlls li:nth-child(4) .dot {
+  background-color: transparent;
+}
+
+/* Slider images */
+.slider {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -32,25 +79,43 @@ ul {
   border-radius: 1rem;
 }
 
-input[name='meme_'] {
+#meme01:checked ~ .slider > .slides {
+  transform: translateX(0%);
+  transition: transform 0.4s;
+}
+#meme02:checked ~ .slider > .slides {
+  transform: translateX(-100%);
+  transition: transform 0.4s;
+}
+#meme03:checked ~ .slider > .slides {
+  transform: translateX(-200%);
+  transition: transform 0.4s;
+}
+#meme04:checked ~ .slider > .slides {
+  transform: translateX(-300%);
+  transition: transform 0.4s;
+}
+
+/* Slider text */
+input[name='meme'] {
   width: 0;
   height: 0;
   visibility: hidden;
 }
 
-.carousel__text p {
+.slider__text p {
   display: none;
 }
 
-#meme01:checked ~ .carousel__text p:nth-child(1) {
+#meme01:checked ~ .slider wrap-bottom .slider__text p:nth-child(1) {
   display: block;
 }
-#meme02:checked ~ .carousel__text p:nth-child(2) {
+#meme02:checked ~ .slider wrap-bottom .slider__text p:nth-child(2) {
   display: block;
 }
-#meme03:checked ~ .carousel__text p:nth-child(3) {
+#meme03:checked ~ .slider wrap-bottom .slider__text p:nth-child(3) {
   display: block;
 }
-#meme04:checked ~ .carousel__text p:nth-child(4) {
+#meme04:checked ~ .slider wrap-bottom .slider__text p:nth-child(4) {
   display: block;
 }
