@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Dynamicaly generated favicon -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg viewBox='0 0 64 64' font-size='56' font-family='Arial' font-weight='600' xmlns='http://www.w3.org/2000/svg'%3E
+        %3Crect width='64' height='64' rx='12' fill='gray'/%3E
+        %3Ctext y='52' x='2' textLength='60' lengthAdjust='spacingAndGlyphs' fill='white'%3E M %3C/text%3E%3C/svg%3E"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Meme slider</title>
+  </head>
+  <body>
+    <main>
+      <div class="carousel">
+        <div class="slides">
+          <img src="./assets/meme01.jpg" class="item" />
+          <img src="./assets/meme02.jpg" class="item" />
+          <img src="./assets/meme03.jpg" class="item" />
+          <img src="./assets/meme04.jpg" class="item" />
+        </div>
+
+        <div class="carousel__control">
+          <ul>
+            <li>
+              <label>
+                <input type="radio" name="meme" id="meme01" checked />
+                <span class="item__dot"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="meme" id="meme02" />
+                <span class="item__dot"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="meme" id="meme03" />
+                <span class="item__dot"></span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="meme" id="meme04" />
+                <span class="item__dot"></span>
+              </label>
+            </li>
+          </ul>
+
+          <div class="carousel__text">
+            <p>Better job</p>
+            <p>Acquiring a talent</p>
+            <p>Candidate must get the final interview</p>
+            <p>Dancing combo</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
