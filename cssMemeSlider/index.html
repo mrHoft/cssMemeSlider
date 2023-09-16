@@ -15,7 +15,12 @@
   </head>
   <body>
     <main>
-      <div class="carousel">
+      <input type="radio" name="meme" id="meme01" checked />
+      <input type="radio" name="meme" id="meme02" />
+      <input type="radio" name="meme" id="meme03" />
+      <input type="radio" name="meme" id="meme04" />
+
+      <div class="slider">
         <div class="slides">
           <img src="./assets/meme01.jpg" class="item" width="500" height="300" alt="meme" />
           <img src="./assets/meme02.jpg" class="item" width="500" height="300" alt="meme" />
@@ -23,42 +28,37 @@
           <img src="./assets/meme04.jpg" class="item" width="500" height="300" alt="meme" />
         </div>
 
-        <input type="radio" name="meme" id="meme01" checked />
-        <input type="radio" name="meme" id="meme02" />
-        <input type="radio" name="meme" id="meme03" />
-        <input type="radio" name="meme" id="meme04" />
+        <wrap-bottom>
+          <div class="slider__text">
+            <p>Better job</p>
+            <p>Acquiring a talent</p>
+            <p>Candidate must get the the final interview</p>
+            <p>Dancing combo</p>
+          </div>
 
-        <div class="carousel__control">
-          <ul>
+          <ul class="controlls">
             <li>
-              <label>
-                <span class="item__dot"></span>
+              <label for="meme01">
+                <span class="dot"></span>
               </label>
             </li>
             <li>
-              <label>
-                <span class="item__dot"></span>
+              <label for="meme02">
+                <span class="dot"></span>
               </label>
             </li>
             <li>
-              <label>
-                <span class="item__dot"></span>
+              <label for="meme03">
+                <span class="dot"></span>
               </label>
             </li>
             <li>
-              <label>
-                <span class="item__dot"></span>
+              <label for="meme04">
+                <span class="dot"></span>
               </label>
             </li>
           </ul>
-        </div>
-
-        <div class="carousel__text">
-          <p>Better job</p>
-          <p>Acquiring a talent</p>
-          <p>Candidate must get the the final interview</p>
-          <p>Dancing combo</p>
-        </div>
+        </wrap-bottom>
       </div>
     </main>
   </body>
